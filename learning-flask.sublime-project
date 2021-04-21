@@ -1,0 +1,77 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "learning flask",
+			"selector": "source.python",
+			"shell_cmd": "\"/home/bruno/Documents/dev/learning-flask/venv-learning-flask/bin/python\" -u \"$file\""
+		},
+		{
+			"auto_close": true,
+			"env":
+			{
+				"PYTHONIOENCODING": "utf-8"
+			},
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"focus": true,
+			"name": "learning flask terminal",
+			"post_window_hooks":
+			[
+				[
+					"carry_file_to_pane",
+					{
+						"direction": "right"
+					}
+				]
+			],
+			"selector": "source.python",
+			"shell_cmd": "\"/home/bruno/Documents/dev/learning-flask/venv-learning-flask/bin/python\" -u \"$file\"",
+			"target": "terminus_open",
+			"timeit": true,
+			"title": "learning flask terminal",
+			"variants":
+			[
+				{
+					"name": "Syntax Check",
+					"shell_cmd": "\"/home/bruno/Documents/dev/learning-flask/venv-learning-flask/bin/python\" -m py_compile \"${file}\""
+				}
+			],
+			"working_dir": "$file_path"
+		},
+		{
+			"auto_close": true,
+			"env":
+			{
+				"PYTHONIOENCODING": "utf-8"
+			},
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"focus": true,
+			"name": "learning flask ipython",
+			"post_window_hooks":
+			[
+				[
+					"carry_file_to_pane",
+					{
+						"direction": "right"
+					}
+				]
+			],
+			"selector": "source.python",
+			"shell_cmd": "\"/home/bruno/Documents/dev/learning-flask/venv-learning-flask/bin/ipython\"",
+			"target": "terminus_open",
+			"timeit": true,
+			"title": "ipython",
+			"working_dir": "$file_path"
+		},
+	],
+
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	
+	"python_interpreter": "/home/bruno/Documents/dev/learning-flask/venv-learning-flask/bin/python"
+}
