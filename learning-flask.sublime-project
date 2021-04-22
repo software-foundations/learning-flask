@@ -64,14 +64,18 @@
 			"title": "ipython",
 			"working_dir": "$file_path"
 		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"/home/bruno/Documents/dev/learning-flask/venv-learning-flask/bin/python\" -u \"$file\""
+		}
 	],
-
 	"folders":
 	[
 		{
 			"path": "."
 		}
 	],
-	
 	"python_interpreter": "/home/bruno/Documents/dev/learning-flask/venv-learning-flask/bin/python"
 }
